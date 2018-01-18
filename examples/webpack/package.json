@@ -1,0 +1,40 @@
+{
+  "name": "webpack-example",
+  "version": "0.0.1",
+  "description": "Example for webpack Loader to use react-hot-loader without any changes in your App",
+  "scripts": {
+    "start": "node webpack-dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoamELB/react-hot-loader-loader.git"
+  },
+  "keywords": [
+    "React",
+    "HMR",
+    "Webpack",
+    "Loader"
+  ],
+  "author": "NoamELB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoamELB/react-hot-loader-loader/issues"
+  },
+  "homepage": "https://github.com/NoamELB/react-hot-loader-loader#readme",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "html-webpack-plugin": "2.30.1",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.10.0",
+    "react-hot-loader": "4.0.0-beta.15",
+    "react-hot-loader-loader": "0.0.1"
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  }
+}
