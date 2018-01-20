@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('./webpack.config');
 
-const [protocol, host, port] = ['http', 'localhost', 5050];
+const [protocol, host, port] = ['http', 'localhost', 1234];
 const publicPath = `${protocol}://${host}:${port}`;
 
 const devServerConfig = {
