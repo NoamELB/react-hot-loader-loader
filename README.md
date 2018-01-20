@@ -42,6 +42,7 @@ This Webpack loader just make things cleaner and easier, **wrapping components w
 
 This component:
 ```js
+import React from 'react';
 export default class App extends React.Component {
     render() {
         return 'something';
@@ -51,6 +52,7 @@ export default class App extends React.Component {
 Will transform to this (before ES6 transpilation):
 ```js
 import {hot} from 'react-hot-loader';
+import React from 'react';
 class App extends React.Component {
     render() {
         return 'something';
