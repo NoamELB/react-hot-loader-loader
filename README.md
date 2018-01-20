@@ -14,10 +14,6 @@ Example:
 ```
 npm i react-hot-loader-loader
 ```
-or
-```
-yarn add react-hot-loader-loader
-```
 
 2. In your Webpack configuration, add this loader:
 ```js
@@ -35,7 +31,7 @@ This loader **must** be placed after any ES6 transpiling loader (Babel), to make
 }
 ```
 
-[Working project example](https://github.com/NoamELB/react-hot-loader-loader/tree/master/examples/webpack)
+[Working project example with HMR,  react-hot-loader and error recovery.](https://github.com/NoamELB/react-hot-loader-loader/tree/master/examples/webpack)
 
 **The loader is dependent on react-hot-loader v4+, and won't work with earlier versions** (FYI, v4 is still in beta, though it is working very very well).
 
