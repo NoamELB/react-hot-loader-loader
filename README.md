@@ -18,7 +18,7 @@ npm i react-hot-loader-loader
 2. In your Webpack configuration, add this loader:
 ```js
 {
-    test: /\/App\.js$/, // regex to match files receiving react-hot-loader functionality 
+    test: /\/App\.js$/, // regex to match files to receive react-hot-loader functionality 
     loader: require.resolve('react-hot-loader-loader'),
 }
 ```
