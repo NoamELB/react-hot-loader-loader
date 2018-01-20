@@ -5,7 +5,7 @@ All it takes is a simple regex to indicate where your "App" Components are.
 
 Example:
 
-![react-hot-loader-loader example](https://imgur.com/cYydZeO.gif)
+![react-hot-loader-loader example](https://i.imgur.com/PQDkTdW.gif)
 
 [This example code (A very informative webpack example)](https://github.com/NoamELB/react-hot-loader-loader/tree/master/examples/webpack)
 
