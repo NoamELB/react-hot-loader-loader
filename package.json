@@ -1,6 +1,6 @@
 {
   "name": "react-hot-loader-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Webpack Loader to use react-hot-loader without any changes in your App",
   "main": "webpack.js",
   "scripts": {
@@ -26,6 +26,6 @@
     "jest": "^22.1.2"
   },
   "dependencies": {
-    "react-hot-loader": "^4.0.0-beta.15"
+    "react-hot-loader": "^4.0.0-beta.17"
   }
 }
