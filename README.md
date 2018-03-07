@@ -43,7 +43,7 @@ This loader **must** be placed after any ES6 transpiling loader (Babel), to make
 
 ## How it works?
 
-[react-hot-loader next](https://github.com/gaearon/react-hot-loader/tree/next) is amazing! It exposes an HOC that does all the heavy lifting. It can wrap any component and will add real time components tweaking functionality while using HMR.
+[react-hot-loader](https://github.com/gaearon/react-hot-loader) is amazing! It exposes an HOC that does all the heavy lifting. It can wrap any component and will add real time components tweaking functionality while using HMR.
 
 This Webpack loader just make things cleaner and easier, **wrapping components with this HOC for you**. All that from a Webpack configuration and not from inside Components.
 
