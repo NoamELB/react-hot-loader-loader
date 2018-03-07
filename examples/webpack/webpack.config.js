@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     // This is quite fast and gives a really good debugging experience (original es6 in sources and when debugging)
     // Change to 'eval' for faster processing, but es5 in sources
     devtool: 'cheap-module-source-map',
@@ -32,7 +33,7 @@ module.exports = {
                         loader: require.resolve('babel-loader'),
                         options: {
                             babelrc: false,
-                            presets: [require.resolve('babel-preset-env'), require.resolve('babel-preset-react')],
+                            presets: [require.resolve('@babel/preset-env'), require.resolve('@babel/preset-react')],
                             plugins: [
                                 // You need to add this for react-hot-loader to work
                                 require.resolve('react-hot-loader/babel'),
