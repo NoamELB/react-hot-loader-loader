@@ -1,5 +1,5 @@
 function AddReactHotLoader(source) {
-    if (!source || !(/^\s*export\s+default/m.exec(source))) {
+    if (!source || !/^\s*export\s+default/m.exec(source)) {
         return source;
     }
     let newSource = getImportLine() + source;

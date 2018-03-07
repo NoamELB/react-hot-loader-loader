@@ -1,31 +1,31 @@
 {
-  "name": "react-hot-loader-loader",
-  "version": "0.0.3",
-  "description": "Webpack Loader to use react-hot-loader without any changes in your App",
-  "main": "webpack.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NoamELB/react-hot-loader-loader.git"
-  },
-  "keywords": [
-    "React",
-    "HMR",
-    "Webpack",
-    "Loader"
-  ],
-  "author": "NoamELB",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/NoamELB/react-hot-loader-loader/issues"
-  },
-  "homepage": "https://github.com/NoamELB/react-hot-loader-loader#readme",
-  "devDependencies": {
-    "jest": "^22.1.2"
-  },
-  "dependencies": {
-    "react-hot-loader": "^4.0.0-beta.17"
-  }
+    "name": "react-hot-loader-loader",
+    "version": "0.0.4",
+    "description": "Webpack Loader to use react-hot-loader without any changes in your App",
+    "main": "webpack.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NoamELB/react-hot-loader-loader.git"
+    },
+    "keywords": [
+        "React",
+        "HMR",
+        "Webpack",
+        "Loader"
+    ],
+    "author": "NoamELB",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NoamELB/react-hot-loader-loader/issues"
+    },
+    "homepage": "https://github.com/NoamELB/react-hot-loader-loader#readme",
+    "devDependencies": {
+        "jest": "^22.1.2"
+    },
+    "dependencies": {
+        "react-hot-loader": "^4.0.0"
+    }
 }

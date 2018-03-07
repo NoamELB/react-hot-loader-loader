@@ -9,7 +9,7 @@ module.exports = {
 
     // Defining only 1 application called 'app', and in it, only one entry point -> ./src/index.js
     entry: {
-        app: ['./src/index.js']
+        app: ['./src/index.js'],
     },
 
     // Setting the output in __dirname/bundle.js (path), and make it available in the server on /bundle.js (publicPath)
@@ -27,21 +27,20 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules.*/,
-                use: [{
-                    loader: require.resolve('babel-loader'),
-                    options: {
-                        babelrc: false,
-                        presets: [
-                            require.resolve('babel-preset-env'),
-                            require.resolve('babel-preset-react')
-                        ],
-                        plugins: [
-                            // You need to add this for react-hot-loader to work
-                            require.resolve('react-hot-loader/babel')
-                        ],
-                        cacheDirectory: true
-                    }
-                }]
+                use: [
+                    {
+                        loader: require.resolve('babel-loader'),
+                        options: {
+                            babelrc: false,
+                            presets: [require.resolve('babel-preset-env'), require.resolve('babel-preset-react')],
+                            plugins: [
+                                // You need to add this for react-hot-loader to work
+                                require.resolve('react-hot-loader/babel'),
+                            ],
+                            cacheDirectory: true,
+                        },
+                    },
+                ],
             },
 
             // This loader is adding the react-hot-loader's HOC wrapper to every '/App.js' file
@@ -50,12 +49,12 @@ module.exports = {
             {
                 test: /\/App\.js$/,
                 loader: require.resolve('react-hot-loader-loader'),
-            }
+            },
 
             // You can add unrelated loaders (non-js) here
             // For example: css pre-processing, images, sprites, etc.
             // Everything added here will happen to the files before the react-hot-loader-loader loader
-        ]
+        ],
     },
     plugins: [
         // This plugin is needed because we don't have any html file, so it will generate a virtual /index.html
@@ -69,6 +68,6 @@ module.exports = {
 
         // This plugin is super important - it make sure that you will not get a full refresh after errors
         // that are under App.js (where we are adding the react-hot-loader code)
-        new webpack.NoEmitOnErrorsPlugin()
-    ]
+        new webpack.NoEmitOnErrorsPlugin(),
+    ],
 };
