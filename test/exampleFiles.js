@@ -103,7 +103,7 @@ const reactAppToMakeSuperHot = class extends Component {
         return 'whatever';
     }
 }
-export default hot(module)(reactAppToMakeSuperHot);`
+export default hot(module)(reactAppToMakeSuperHot);`;
 
 const exampleFiles = {
     emptyFile,
