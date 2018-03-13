@@ -40,7 +40,7 @@ function getImportLine() {
 function getExportDefaultClassName(source) {
     let className = '';
     const matches = source.match(/^\s*export\s+default\s+class\s+(.*?)\s+/m);
-    if (matches && matches[1]) {
+    if (matches && matches[1] && matches[1] !== 'extends') {
         className = matches[1];
     }
     return className;

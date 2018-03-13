@@ -90,6 +90,21 @@ export class WrappedWithHOC extends Component {
 const reactAppToMakeSuperHot = connect({}, {})(WrappedWithHOC);
 export default hot(module)(reactAppToMakeSuperHot);`;
 
+// Case 9
+const exportAnonymousClass = `export default class extends Component {
+    render() {
+        return 'whatever';
+    }
+}`;
+
+expectedExportAnonymousClass = `import {hot} from 'react-hot-loader';
+const reactAppToMakeSuperHot = class extends Component {
+    render() {
+        return 'whatever';
+    }
+}
+export default hot(module)(reactAppToMakeSuperHot);`
+
 const exampleFiles = {
     emptyFile,
     fileWithoutAnyExport,
@@ -99,6 +114,7 @@ const exampleFiles = {
     functionalComponentOnBottom,
     arrowFunction,
     wrappedWithHOC,
+    exportAnonymousClass,
 };
 
 const expectedOutputFiles = {
@@ -110,6 +126,7 @@ const expectedOutputFiles = {
     functionalComponentOnBottom: expectedFunctionalComponentOnBottom,
     arrowFunction: expectedArrowFunction,
     wrappedWithHOC: expectedWrappedWithHOC,
+    exportAnonymousClass: expectedExportAnonymousClass,
 };
 
 module.exports = {exampleFiles, expectedOutputFiles};
