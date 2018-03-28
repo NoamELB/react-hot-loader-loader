@@ -1,6 +1,6 @@
 # react-hot-loader-loader
 
-A Webpack Loader that automatically insert react-hot-loader to your app, **without any changes in your app code**.
+A Webpack Loader that automatically inserts react-hot-loader to your app, **without any changes in your app code**.
 
 All it takes is a simple regex to indicate where your "App" Components are.
 
