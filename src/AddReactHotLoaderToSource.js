@@ -48,7 +48,7 @@ function getExportDefaultClassName(source) {
 
 function getExportDefaultFunctionName(source) {
     let functionName = '';
-    const matches = source.match(/^\s*export\s+default\s+function\s+(.*?)\s+/m);
+    const matches = source.match(/^\s*export\s+default\s+function\s+([^(\s]*)\s?\(/m);
     if (matches && matches[1]) {
         functionName = matches[1];
     }
