@@ -105,6 +105,44 @@ const reactAppToMakeSuperHot = class extends Component {
 }
 export default hot(module)(reactAppToMakeSuperHot);`;
 
+// Case 10
+const functionalComponentNoSpacing = `export default function exportedFunction() {
+    return 'whatever';
+}`;
+const expectedFunctionalComponentNoSpacing = `import {hot} from 'react-hot-loader';
+function exportedFunction() {
+    return 'whatever';
+}
+export default hot(module)(exportedFunction);`;
+
+const functionalComponentWithParams = `export default function exportedFunction({ name }) {
+    return 'whatever';
+}`;
+const expectedFunctionalComponentWithParams = `import {hot} from 'react-hot-loader';
+function exportedFunction({ name }) {
+    return 'whatever';
+}
+export default hot(module)(exportedFunction);`;
+
+const functionalComponentNoName = `export default function () {
+    return 'whatever';
+}`;
+const expectedFunctionalComponentNoName = `import {hot} from 'react-hot-loader';
+const reactAppToMakeSuperHot = function () {
+    return 'whatever';
+}
+export default hot(module)(reactAppToMakeSuperHot);`;
+
+const functionalComponentNoNameAndNoSpace = `export default function() {
+    return 'whatever';
+}`;
+const expectedFunctionalComponentNoNameAndNoSpace = `import {hot} from 'react-hot-loader';
+const reactAppToMakeSuperHot = function() {
+    return 'whatever';
+}
+export default hot(module)(reactAppToMakeSuperHot);`;
+
+
 const exampleFiles = {
     emptyFile,
     fileWithoutAnyExport,
@@ -115,6 +153,10 @@ const exampleFiles = {
     arrowFunction,
     wrappedWithHOC,
     exportAnonymousClass,
+    functionalComponentNoSpacing,
+    functionalComponentWithParams,
+    functionalComponentNoName,
+    functionalComponentNoNameAndNoSpace,
 };
 
 const expectedOutputFiles = {
@@ -127,6 +169,10 @@ const expectedOutputFiles = {
     arrowFunction: expectedArrowFunction,
     wrappedWithHOC: expectedWrappedWithHOC,
     exportAnonymousClass: expectedExportAnonymousClass,
+    functionalComponentNoSpacing: expectedFunctionalComponentNoSpacing,
+    functionalComponentWithParams: expectedFunctionalComponentWithParams,
+    functionalComponentNoName: expectedFunctionalComponentNoName,
+    functionalComponentNoNameAndNoSpace: expectedFunctionalComponentNoNameAndNoSpace,
 };
 
 module.exports = {exampleFiles, expectedOutputFiles};
