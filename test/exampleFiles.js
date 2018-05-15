@@ -115,6 +115,7 @@ function exportedFunction() {
 }
 export default hot(module)(exportedFunction);`;
 
+// Case 11
 const functionalComponentWithParams = `export default function exportedFunction({ name }) {
     return 'whatever';
 }`;
@@ -124,6 +125,7 @@ function exportedFunction({ name }) {
 }
 export default hot(module)(exportedFunction);`;
 
+// Case 12
 const functionalComponentNoName = `export default function () {
     return 'whatever';
 }`;
@@ -133,6 +135,7 @@ const reactAppToMakeSuperHot = function () {
 }
 export default hot(module)(reactAppToMakeSuperHot);`;
 
+// Case 13
 const functionalComponentNoNameAndNoSpace = `export default function() {
     return 'whatever';
 }`;
