@@ -23,7 +23,7 @@
     },
     "homepage": "https://github.com/NoamELB/react-hot-loader-loader#readme",
     "devDependencies": {
-        "jest": "^22.1.2"
+        "jest": "^22.4.3"
     },
     "peerDependencies": {
         "react-hot-loader": ">= 4.0.0"
