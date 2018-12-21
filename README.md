@@ -2,7 +2,7 @@
 
 A Webpack Loader that automatically inserts react-hot-loader to your app, **without any changes in your app code**.
 
-All it takes is a simple regex to indicate where your "App" Components are.
+All it takes is a simple regex to indicate where your "App" Components are. This module does nothing if `NODE_ENV` is set to `production`.
 
 Example:
 
