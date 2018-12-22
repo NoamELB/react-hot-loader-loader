@@ -13,6 +13,7 @@ const devServerConfig = {
     noInfo: true, // make sure there are no useless logs in the terminal (will still show errors)
     clientLogLevel: 'info', // change to warning if there are too many messages in the browser console
     https: protocol === 'https', // true will generate a localhost https certificate that you should white-list by using this guide (works for all browser beside firefox, which you can whitelist manually in browser) https://www.accuweaver.com/2014/09/19/make-chrome-accept-a-self-signed-certificate-on-osx/
+    disableHostCheck: true, // no host check for localhost
 };
 
 // Adding dev-server client too all the applications (we only have one in this example - 'app')
