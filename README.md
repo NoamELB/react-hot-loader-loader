@@ -27,7 +27,7 @@ npm i react-hot-loader-loader
 }
 ```
 
-This loader **must** be placed before any ES6 transpiling loader (Babel), to make sure it transforms the code before it.
+This loader **must** be placed after any ES6 transpiling loader (Babel), to make sure it transforms the code before it.
 
 3.  Add react-hot-loader to your Babel plugins:
 
